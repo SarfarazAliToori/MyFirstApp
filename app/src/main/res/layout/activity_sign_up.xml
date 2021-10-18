@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="54dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/edt_email"
+        app:layout_constraintStart_toStartOf="@+id/edt_email"
+        tools:srcCompat="@tools:sample/avatars"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:hint="Enter Your Email"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edt_pass1"
+        app:layout_constraintStart_toStartOf="@+id/edt_pass1" />
+
+    <EditText
+        android:id="@+id/edt_pass1"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="330dp"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_pass2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="39dp"
+        android:ems="10"
+        android:hint="Enter Password Again"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/edt_pass1"
+        app:layout_constraintTop_toBottomOf="@+id/edt_pass1" />
+
+    <Button
+        android:id="@+id/btn_signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Sgin Up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_pass2" />
+
+    <TextView
+        android:id="@+id/tv_logIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="2dp"
+        android:text="OR Log In"
+        app:layout_constraintEnd_toEndOf="@+id/edt_pass2"
+        app:layout_constraintTop_toBottomOf="@+id/edt_pass2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
