@@ -18,6 +18,15 @@ class MainActivity : AppCompatActivity() {
         val title = supportActionBar
         title?.title = "Home Screen"
 
+        val bundleUserName : Bundle? = intent.extras
+        val bundleUserPass : Bundle? = intent.extras
+
+        val userName = bundleUserName!!.getString("user_name")
+        val userPass = bundleUserPass!!.getString("user_pass")
+
+        tvMessage.text = userName
+        tvPass.text = userPass
+
         btn_message.setOnClickListener(View.OnClickListener {
             Log.i("Main Activity", "Hello World from Log cat")
             Toast.makeText(this, "Hello World from Toast", Toast.LENGTH_SHORT).show()
