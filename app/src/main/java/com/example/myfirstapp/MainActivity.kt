@@ -27,10 +27,30 @@ class MainActivity : AppCompatActivity() {
         tvMessage.text = userName
         tvPass.text = userPass
 
-        btn_message.setOnClickListener(View.OnClickListener {
-            Log.i("Main Activity", "Hello World from Log cat")
-            Toast.makeText(this, "Hello World from Toast", Toast.LENGTH_SHORT).show()
+        // Fragments Buttons Actions
 
-        })
+        btn_frament1.setOnClickListener {
+            fragOne(Fragment1())
+        }
+
+        btn_fragment2.setOnClickListener {
+            fragTwo(Fragment2())
+        }
+
+
+    }
+
+
+    // Fragment 1 Method
+    fun fragOne(frag1:Fragment1) {
+        val ft = supportFragmentManager.beginTransaction()
+        ft.replace(R.id.framgmentFram, frag1)
+        ft.commit()
+    }
+
+    fun fragTwo(frag2 : Fragment2) {
+        val ft = supportFragmentManager.beginTransaction()
+        ft.replace(R.id.framgmentFram, frag2)
+        ft.commit()
     }
 }
